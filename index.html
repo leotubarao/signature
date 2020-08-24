@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+  <meta name="robots" content="index, follow">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#1818E8">
+	<meta http-equiv="Content-Language" content="pt-br">
+	<meta name="author" content="LTCO">
+	<meta name="description" content="Full-Stack Developer | UI Designer">
+	<meta name="keywords"
+  content="HTML,CSS,JavaScript,WordPress,SASS,SCSS,Gulp,Grunt,NodeJS,VueJS,ReactJS,React Native,Design,UI,UX,Frontend,Backend">
+	<title>LTCO</title>
+  <link rel="canonical" href="https://ltco.com.br/">
+  <script src="https://unpkg.com/feather-icons"></script>
+	<link rel="stylesheet" href="https://use.typekit.net/pvf7ihh.css">
+	<style type="text/css">
+		:root {
+			--blue: #1818E8;
+			--grey: #202027;
+			--white: #FAFAFA;
+		}
+
+		* {
+			padding: 0;
+			margin: 0;
+			font-family: ibm-plex-mono, monospace;
+			font-weight: 700;
+		}
+
+		body {
+			background-color: var(--white);
+		}
+
+		#root {
+			display: flex;
+			height: 100vh;
+		}
+
+		main {
+			margin: auto;
+			display: flex;
+      flex-direction: column;
+      align-items: center;
+		}
+
+    main > img {
+      box-shadow: 0 15px 26px -6px rgb(24, 24, 232, 0.45);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 120px;
+      margin-top: 2rem;
+    }
+
+    a {
+      color: var(--grey);
+      text-decoration: none;
+      transition: transform 200ms ease-in-out;
+    }
+
+    a:hover {
+      transform: scale(1.1);
+    }
+
+    .dark body {
+      background-color: var(--grey);
+    }
+
+    .dark body a {
+      color: var(--white);
+    }
+	</style>
+</head>
+
+<body>
+  <div id="root">
+	<main>
+    <img src="https://ltco.com.br/assets/ltco.svg" width="160" alt="logo-ltco" />
+    <nav>
+      <a
+        href="https://www.instagram.com/leotubaraomusic/"
+        title="Instagram LeoTubarão"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i data-feather="instagram"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/ltco/"
+        title="LinkedIn LeoTubarão"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i data-feather="linkedin"></i>
+      </a>
+      <a
+        href="https://github.com/leotubarao"
+        title="GitHub LeoTubarão"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i data-feather="github"></i>
+      </a>
+    </nav>
+  </div>
+  </main>
+
+  <script>
+    feather.replace({ 'stroke-width': 1.5 });
+
+    (function() {
+      const date = new Date();
+      // date.setHours(12);
+      const hr = date.getHours();
+
+      const theme = (hr > 5 && hr < 19) ? 'dark' : 'light';
+
+      const scriptTheme = document.createElement('script');
+
+      scriptTheme.src = `./signature-ltco.js?theme=${theme}`;
+
+      document.body.appendChild(scriptTheme);
+
+      if (hr > 5 && hr < 19) {
+        document.querySelector('html').classList.remove('dark');
+        return;
+      }
+
+      document.querySelector('html').classList.add('dark');
+     })();
+  </script>
+</body>
+
+</html>

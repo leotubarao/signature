@@ -139,4 +139,4 @@ class SignatureLTCO {
   }
 }
 
-window.onload = () => { new SignatureLTCO() };
+new SignatureLTCO();

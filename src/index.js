@@ -72,7 +72,9 @@ class SignatureLTCO {
 	}
 
 	insertLogoImage() {
-		document.body.append(this.ltcoLogoImage);
+    const appendLogoImage = document.getElementById('root') || document.body;
+
+    appendLogoImage.append(this.ltcoLogoImage);
   }
 
   appendStyle() {

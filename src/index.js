@@ -73,6 +73,10 @@ class SignatureLTCO {
 
 	insertLogoImage() {
     const appendLogoImage = document.getElementById('root') || document.body;
+    const { position } = getComputedStyle(appendLogoImage);
+
+    if (position !== 'relative')
+      appendLogoImage.style.position = 'relative';
 
     appendLogoImage.append(this.ltcoLogoImage);
   }
